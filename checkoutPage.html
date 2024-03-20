@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <script
+      src="https://kit.fontawesome.com/062dc8a009.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      function removeRequired() {
+          var inputs = document.querySelectorAll('input');
+          inputs.forEach(input => {
+              input.removeAttribute('required');
+          });
+      }
+      </script>
+      <main id="main">
+          <div class="checkout-form">
+            <div class="checkout-form__shoppinglist">
+              <h1>Checkout</h1>
+            </div>
+            <form class="checkout-form__form" action="confirmed.html" method="get">
+              <div class="group">
+                  <label class="checkout-form__label" for="firstname">Firstname:</label>
+                  <input class="checkout-form__input" type="text" id="firstname" name="firstname" required />
+                  <label class="checkout-form__label" for="lastname">Lastname:</label>
+                  <input class="checkout-form__input" type="text" id="lastname" name="lastname" required />
+              </div>
+              <div class="group">
+                  <label class="checkout-form__label" for="address">Address:</label>
+                  <input class="checkout-form__input" type="text" id="address" name="address" required />
+                  <label class="checkout-form__label" for="postal-code">Postal code:</label>
+                  <input class="checkout-form__input" type="text" id="postal-code" name="postal-code" required />
+                  <label class="checkout-form__label" for="city">City:</label>
+                  <input class="checkout-form__input" type="text" id="city" name="city" required />
+              </div>
+              <div class="group">
+                  <label class="checkout-form__label" for="phonenumber">Phone number:</label>
+                  <input class="checkout-form__input" type="tel" id="phonenumber" name="phonenumber" required />
+                  <label class="checkout-form__label" for="email">Email:</label>
+                  <input class="checkout-form__input" type="email" id="email" name="email" required />
+              </div>
+              <div class="group">
+                  <label class="checkout-form__label" for="creditcard-owner">Creditcard owner:</label>
+                  <input class="checkout-form__input" type="text" id="creditcard-owner" name="creditcard-owner" required />
+                  <label class="checkout-form__label" for="creditcard-number">Creditcard number:</label>
+                  <input class="checkout-form__input" type="text" id="creditcard-number" name="creditcard-number" required />
+                  <label class="checkout-form__label" for="cvc">CVC:</label>
+                  <input class="checkout-form__input" type="text" id="cvc" name="cvc" required />
+              </div>
+              <div class="button-container">
+                <button class="checkout-form__cancel" type="button" onclick="removeRequired(); window.location.href='shoppingcartPage.html'">Go back</button>
+                <button class="checkout-form__submit" type="submit">Confirm Order</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer id="footerX">
+        <section id="menu-wrapperX">
+          <input class="menu__buttonX" type="checkbox" id="menu__buttonX" />
+          <label class="hambX" for="menu__buttonX"
+            ><span class="hamb__line"></span
+          ></label>
+          <a id="shoppingCartX" href="shoppingcartPage.html">
+            <i class="fa-solid fa-cart-shopping fa-xl" style="color: #143332"></i>
+            <div id="cartTotal"></div>
+          </a>
+          <nav class="navX">
+            <ul class="nav__menuX">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/index.html#products">Products</a></li>
+            </ul>
+          </nav>
+        </section>
+      </footer> 
+    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/checkoutPage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+@use "mixins";
+
+#main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#cartTotal {
+  z-index: 1;
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 1.5px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.checkout-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form__shoppinglist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #004643;
+  border: 1px solid black;
+
+  @include mixins.desktop {
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    border: none;
+  }
+}
+
+.checkout-form__shoppinglist h1 {
+  align-self: center;
+  color: #c6f2ff;
+}
+
+.checkout-form__shoppinglist div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.desktop {
+    width: 80%;
+  }
+}
+
+.checkout-form__shoppinglist div .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mixins.desktop {
+    flex-direction: row;
+  }
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.desktop {
+    flex-direction: row;
+  }
+}
+
+.checkout-form__form {
+  padding-top: 20px;
+}
+
+.checkout-form__form .button-container {
+  padding: 20px 0px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+
+  @include mixins.desktop {
+    position: relative;
+    top: 60px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 80%;
+  }
+  button {
+    border-radius: 10px;
+    @include mixins.desktop {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.2rem;
+      box-shadow: 0px 0px 4px 2px #c6f2ff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  button:hover {
+    @include mixins.desktop {
+      background-color: #c6f2ff;
+      color: black;
+    }
+  }
+
+  button:active {
+    @include mixins.desktop {
+      background-color: #004643;
+      color: #c6f2ff;
+    }
+  }
+}
+
+.checkout-form__cancel {
+  background-color: #004643;
+  width: 40%;
+  height: 50px;
+  border: 1px solid white;
+  color: #c6f2ff;
+}
+
+.checkout-form__submit {
+  background-color: #25c565;
+  width: 40%;
+  border: none;
+  border: 1px solid white;
+}
+
+#footerX {
+  margin-top: 60px;
+  #menu-wrapperX {
+    width: 100%;
+    background-color: #c6f2ff;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+    @include mixins.desktop {
+      background-color: #c6f2ff6e;
+      top: 0;
+      height: 50px;
+    }
+  }
+
+  .navX {
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mixins.desktop {
+      flex-direction: row;
+      justify-content: right;
+      max-height: 100%;
+    }
+  }
+
+  .nav__menuX {
+    list-style: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+    & li {
+      margin-bottom: 10px;
+
+      @include mixins.desktop {
+        margin: 0;
+      }
+    }
+
+    @include mixins.desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      margin-right: 50px;
+    }
+  }
+
+  .nav__menuX a {
+    display: block;
+    text-decoration: none;
+    color: #143332;
+  }
+
+  #shoppingCartX {
+    // padding: 20px 20px;
+    position: relative;
+    padding-top: 30px;
+    padding-right: 20px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+
+    @include mixins.desktop {
+      position: absolute;
+      right: 0;
+      // padding: 15px 15px;
+      padding-top: 20px;
+      padding-right: 15px;
+    }
+  }
+
+  #cartTotal {
+    z-index: 1;
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 1.5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+
+  .hambX {
+    padding: 30px 20px;
+    float: left;
+
+    @include mixins.desktop {
+      display: none;
+    }
+  }
+
+  .hambX:hover,
+  #shoppingCartX:hover {
+    cursor: pointer;
+  }
+
+  .hamb__line {
+    background-color: #143332;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 27px;
+    border-radius: 5px;
+  }
+
+  .hamb__line::before,
+  .hamb__line::after {
+    background-color: #143332;
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .hamb__line::before {
+    top: 10px;
+  }
+
+  .hamb__line::after {
+    top: -10px;
+  }
+
+  .menu__buttonX {
+    display: none;
+  }
+
+  .menu__buttonX:checked ~ .navX {
+    max-height: 100px;
+  }
+
+  .menu__buttonX:checked ~ .hambX .hamb__line {
+    background: transparent;
+  }
+
+  .menu__buttonX:checked ~ .hambX .hamb__line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .menu__buttonX:checked ~ .hambX .hamb__line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}

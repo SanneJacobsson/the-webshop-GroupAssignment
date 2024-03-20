@@ -1,0 +1,136 @@
+@use "mixins";
+
+#indexbody {
+  margin: 0;
+  background-image: linear-gradient(#00c2bb, #255c5a);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#hero__img {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1455383333344-451b6147021b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  opacity: 60%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero__img a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero__logo {
+  width: 180px;
+  margin-top: 50px;
+
+  @include mixins.desktop {
+    width: 230px;
+    margin-top: 100px;
+  }
+}
+
+#hero__logo img {
+  width: 100%;
+}
+
+#hero__arrow {
+  position: absolute;
+  bottom: 100px;
+
+  @include mixins.desktop {
+    bottom: 50px;
+  }
+}
+
+#products {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 65px;
+
+  display: flex;
+  justify-content: center;
+
+  @include mixins.desktop {
+    margin-bottom: 0;
+  }
+}
+
+#main__productsContainer {
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #c6f2ff7c;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 10px;
+  }
+}
+
+.main__productContainer {
+  width: 70%;
+  background-color: #143332;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  @include mixins.desktop {
+    width: 25%;
+  }
+}
+
+.main__imgContainer {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.main__imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__productContainer_text {
+  width: 100%;
+  color: #c6f2ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__productContainer_text h3 {
+  font-size: 1.3rem;
+}
+
+.main__productContainer_text p {
+  font-size: 1.1rem;
+}

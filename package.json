@@ -1,0 +1,17 @@
+{
+  "name": "webshop-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "node src/js/main.js"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  }
+}

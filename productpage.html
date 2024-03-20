@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Webshop</title>
+    <script
+      src="https://kit.fontawesome.com/062dc8a009.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="product">
+      <div id="backgroundProduct">
+        <section id="product_description">
+          <div class="image_container">
+            <img id="productImage" alt="Product Image" />
+          </div>
+          <section id="productContainer">
+          <button id="buy_btn">Buy</button>
+          <h1 id="productName"></h1>
+          <p id="productPrice"></p>
+          <section class="sizecontainer">
+            <section class="size_Xs">
+              <input type="radio" id="XS" name="size" value="XS" />
+              <label for="XS">XS</label>
+            </section>
+            <section class="size_S">
+              <input type="radio" id="S" name="size" value="S" />
+              <label for="S">S</label>
+            </section>
+            <section class="size_M">
+              <input type="radio" id="M" name="size" value="M" />
+              <label for="M">M</label>
+            </section>
+            <section class="size_L">
+              <input type="radio" id="L" name="size" value="L" />
+              <label for="L">L</label>
+            </section>
+            <section class="size_XL">
+              <input type="radio" id="XL" name="size" value="XL" />
+              <label for="XL">XL</label>
+            </section>
+          </section>
+          <p id="productDescription"></p>
+          <p id="productMaterial"></p>
+          <p id="productColor"></p>
+        </section>
+      </div>
+    </main>
+    <section id="menu-wrapper">
+      <input class="menu__button" type="checkbox" id="menu__button" />
+      <label class="hamb" for="menu__button"
+        ><span class="hamb__line"></span
+      ></label>
+      <a id="shoppingCart" href="shoppingcartPage.html">
+        <i class="fa-solid fa-cart-shopping fa-xl" style="color: #143332"></i>
+        <div id="cartTotal"></div>
+      </a>
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="index.html#products">Products</a></li>
+        </ul>
+      </nav>
+    </section>
+    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/productPage.js"></script>
+  </body>
+</html>

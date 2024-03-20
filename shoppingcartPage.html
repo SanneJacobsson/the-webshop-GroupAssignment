@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script
+      src="https://kit.fontawesome.com/062dc8a009.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="shoppingCartBody">
+    <header>
+      <section id="menu-wrapper">
+        <input class="menu__button" type="checkbox" id="menu__button" />
+        <label class="hamb" for="menu__button"
+          ><span class="hamb__line"></span
+        ></label>
+        <a id="shoppingCart" href="shoppingcartPage.html">
+          <i class="fa-solid fa-cart-shopping fa-xl" style="color: #143332"></i>
+          <div id="cartTotal"></div>
+        </a>
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#products">Products</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main id="main_shoppingcartPage">
+      <h1>ShoppingCart</h1>
+      <div id="shoppingcart_container">
+        <div class="shoppingcart_container__products-container"></div>
+      </div>
+      <div class="button-container">
+        <button id="total_button" class="total_button"></button>
+        <button id="checkout_button" class="checkout_button">Checkout ></button>
+      </div>
+    </main>
+    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/shoppingcartPage.js"></script>
+  </body>
+</html>
